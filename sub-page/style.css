@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Press+Start+2P&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(100, 100, 120);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+}
+
+body {
+    background: rgb(50, 50, 70);
+}
+
+.page {
+    position: relative;
+    display: flex;
+    padding: 64px;
+    min-height: 100vh;
+    gap: 32px;
+    opacity: 1;
+    transition: 1s;
+}
+
+.page.software-page, .page.skill-page, .page.project-page {
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.page.project-page {
+    padding: 32px;
+    align-items: flex-start;
+}
+
+.project-page.one-content {
+    padding: 0;
+    align-items: center;
+}
+
+.page.hide {
+    opacity: 0;
+}
+
+.back-btn {
+    position: fixed;
+    display: flex;
+    top: 32px;
+    right: 48px;
+    align-items: center;
+    gap: 5px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    z-index: 100;
+}
+
+.back-btn ion-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.back-btn h5 {
+    font-size: 14px;
+}
+
+.col {
+    display: flex;
+    padding: 32px;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: rgb(255, 255, 255);
+}
+
+.hero.col {
+    min-width: 600px;
+}
+
+.asset.col {
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 0;
+    gap: 8px;
+}
+
+.hero h5 {
+    font-size: 64px;
+}
+
+.hero h6 {
+    font-size: 48px;
+}
+
+.hero p {
+    margin-top: 32px;
+}
+
+.asset-box {
+    width: max-content;
+    padding: 8px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.asset-box img {
+    width: 180px;
+    height: 100px;
+}
+
+.me-w-troop img {
+    width: 100px;
+}
+
+.header-software {
+    position: fixed;
+    display: flex;
+    top: 32px;
+    left: 32px;
+    align-items: center;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    z-index: 100;
+    gap: 5px;
+}
+
+.header-software ion-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.chart-box {
+    width: 500px;
+    height: 500px;
+}
+
+.chart-content {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    color: rgb(255, 255, 255);
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.desc-by-data {
+    margin-top: 16px;
+    max-width: 400px;
+}
+
+.desc-by-data h5 {
+    font-size: 16px;
+}
+
+.desc-by-data p {
+    font-size: 12px;
+}
+
+.skill-container {
+    display: flex;
+    padding: 32px;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.skill-box {
+    display: flex;
+    flex: 1;
+    min-width: 500px;
+    max-width: 600px;
+}
+
+.skill-logo {
+    display: flex;
+    padding: 32px;
+    justify-content: center;
+    align-items: center;
+    background: rgb(70, 70, 90);
+    color: rgb(100, 100, 120);
+}
+
+.skill-logo ion-icon {
+    width: 75px;
+    height: 75px;
+    color: rgb(100, 100, 120);
+}
+
+.skill-logo.glow ion-icon {
+    filter: drop-shadow(0 0 5px rgb(255, 255, 255));
+    color: rgb(255, 255, 255);
+}
+
+.skill-desc {
+    padding: 20px;
+    background: rgb(255, 255, 255);
+}
+
+.skill-desc h5 {
+    font-size: 18px;
+}
+
+.skill-desc p {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.skill-desc h6 {
+    margin-top: 12px;
+    padding: 8px;
+    width: max-content;
+    background: rgb(100, 100, 120);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.sub-page {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: -10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(50, 50, 70, .8);
+    backdrop-filter: blur(2px);
+    transition: .5s;
+    overflow: hidden;
+}
+
+.sub-page.show {
+    opacity: 1;
+    z-index: 1000;
+}
+
+.close-btn {
+    display: flex;
+    padding: 16px;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+}
+
+.close-btn ion-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.proglang-container {
+    display: flex;
+    padding: 64px;
+    padding-top: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 16px 32px;
+}
+
+.proglang-box {
+    display: flex;
+    min-width: 400px;
+    background: rgb(50, 50, 70);
+    box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+    color: rgb(255, 255, 255);
+}
+
+.proglang-icon {
+    display: flex;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+}
+
+.proglang-icon ion-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.proglang-stat {
+    width: 100%;
+    padding: 16px;
+    padding-bottom: 24px;
+    padding-right: 32px;
+}
+
+.proglang-stat h5 {
+    font-size: 16px;
+}
+
+.proglang-stat p {
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+.skill-bar {
+    margin-top: 5px;
+    height: 5px;
+    width: 100%;
+    background: rgb(40, 40, 60);
+}
+
+.skill-percen {
+    height: 100%;
+    width: var(--wd);
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+
+.project-gallery {
+    display: flex;
+    margin-top: 32px;
+    flex-direction: column;
+    align-items: center;
+    max-width: 425px;
+}
+
+.project-row {
+    display: flex;
+}
+
+.project-icon {
+    padding: 8px;
+    width: 125px;
+    height: 125px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.project-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-box {
+    padding: 8px;
+    border: 1px solid rgb(125, 125, 125);
+}
+
+.project-box.phone {
+    width: 75px;
+    height: 125px;
+}
+
+.project-box.l-desktop {
+    width: 225px;
+    height: 125px;
+}
+
+.project-box.desktop {
+    width: 150px;
+    height: 125px;
+}
+
+.project-box img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: .5s;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .15);
+}
+
+.project-box:hover img {
+    transform: scale(2);
+    border-radius: 5px;
+}
+
+.project-desc {
+    padding: 16px 0;
+    color: rgb(255, 255, 255);
+}
+
+.project-desc h5 {
+    font-size: 20px;
+}
+
+.project-desc h6 {
+    margin-top: 3px;
+    font-size: 14px;
+}
+
+.project-desc p {
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+.project-link {
+    width: 100%;
+}
+
+.project-link a {
+    display: block;
+    padding: 5px 8px;
+    background: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(50, 50, 70);
+}
+
+@media(max-width: 1200px) {
+    .hero.col {
+        padding: 0;
+        min-width: 400px;
+    }
+
+    .hero h5 {
+        font-size: 48px;
+    }
+    
+    .hero h6 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 1000px) {
+    .page {
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .page.project-page {
+        flex-direction: row;
+        gap: 0;
+    }
+
+    .chart-content {
+        flex-direction: column;
+        gap: 32px;
+    }
+}
+
+@media(max-width: 700px) {    
+    .page {
+        padding: 24px;
+    }
+
+    .page.software-page, .page.skill-page {
+        padding: 64px 32px;
+    }
+
+    .header-software {
+        top: 20px;
+        left: 20px;
+        font-size: 16px;
+    }
+
+    .header-software ion-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .chart-box {
+        width: 350px;
+        height: 350px;
+    }
+
+    .chart-desc {
+        max-width: 90%;
+    }
+
+    .desc-by-data {
+        min-width: 250px;
+    }
+
+    .back-btn {
+        top: 20px;
+        right: 20px;
+    }
+
+    .back-btn h5 {
+        font-size: 12px;
+    }
+
+    .hero.col {
+        padding: 0;
+        min-width: 300px;
+    }
+
+    .hero h5 {
+        width: max-content;
+        font-size: 32px;
+    }
+    
+    .hero h6 {
+        width: max-content;
+        font-size: 24px;
+    }
+
+    .hero p {
+        margin-top: 16px;
+        font-size: 12px;
+    }
+
+    .skill-box {
+        flex-direction: column;
+        min-width: 300px;
+    }
+
+    .skill-logo {
+        margin-left: 16px;
+        margin-bottom: -16px;
+        padding: 16px;
+        width: max-content;
+        box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+        z-index: 10;
+    }
+
+    .skill-logo ion-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .skill-desc h5 {
+        font-size: 14px;
+    }
+
+    .skill-desc p {
+        font-size: 12px;
+    }
+
+    .skill-desc h6 {
+        font-size: 10px;
+    }
+}
+
+@media(max-width: 500px) {
+    .page.software-page {
+        padding: 64px 16px;
+    }
+
+    .chart-box {
+        width: 300px;
+        height: 300px;
+    }
+
+    .proglang-container, .project-container {
+        transform: scale(.7);
+    }
+}

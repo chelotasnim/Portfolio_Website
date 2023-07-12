@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Press+Start+2P&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background: rgb(50, 50, 70);
+}
+
+.page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(50, 50, 70);
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    margin-top: -100px;
+}
+
+.path img {
+    width: 300px;
+    height: 300px;
+}
+
+.rocket {
+    position: absolute;
+    top: 50%;
+    transform: rotate(-40deg);
+    color: rgb(255, 255, 255);
+    animation: toTheMoon 3s linear 1s forwards;
+}
+
+@keyframes toTheMoon {
+    0% {
+        transform: rotate(-40deg);
+    }
+    10% {
+        transform: translateY(-16px) rotate(0deg);
+    }
+    20% {
+        transform: translateY(-16px) translateX(48px) rotate(84deg);
+    }
+    30% {
+        transform: translateY(16px) translateX(90px) rotate(84deg);
+    }
+    40% {
+        transform: translateY(16px) translateX(120px) rotate(40deg);
+    }
+    50% {
+        transform: translateY(-32px) translateX(140px) rotate(-20deg);
+    }
+    60% {
+        transform: translateY(-60px) translateX(172px) rotate(20deg);
+    }
+    70% {
+        transform: translateY(-70px) translateX(200px) rotate(40deg);
+    }
+    80% {
+        transform: translateY(-70px) translateX(240px) rotate(60deg);
+    }
+    90%, 100% {
+        transform: translateY(-70px) translateX(250px) rotate(20deg);
+    }
+}
+
+.rocket ion-icon {
+    width: 50px;
+    height: 50px;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, .6));
+}
+
+.load-container {
+    position: absolute;
+    bottom: 100px;
+    max-width: 75%;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+}
+
+.load-bar {
+    margin: 20px auto;
+    width: 250px;
+    height: 5px;
+    background: rgb(40, 40, 60);
+}
+
+.inner-bar {
+    width: 0%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 5px rgb(255, 255, 255);
+    animation: loadBar 3s ease-in-out 1s forwards;
+}
+
+@keyframes loadBar {
+    0% {
+        width: 0%;
+    }
+    25% {
+        width: 50%;
+    }
+    50% {
+        width: 75%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.direct-text {
+    font-size: 12px;
+    color: rgb(225, 225, 225);
+}
+
+.wrapp-this {
+    opacity: 0;
+    transition: .5s;
+}
+
+.wrapp-this.displayed {
+    opacity: 1;
+}
+
+@media(max-width: 500px) {
+    .load-container {
+        font-size: 12px;
+    }
+}

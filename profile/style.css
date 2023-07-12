@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Press+Start+2P&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    background: rgb(50, 50, 70);
+}
+
+.page {
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.back-btn {
+    position: absolute;
+    display: flex;
+    top: 24px;
+    right: 24px;
+    align-items: center;
+    gap: 5px;
+}
+
+.back-btn ion-icon {
+    width: 25px;
+    height: 25px;
+    color: rgb(255, 255, 255);
+}
+
+.back-btn a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+}
+
+.sorry {
+    max-width: 75%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.sorry ion-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.sorry h5 {
+    margin-top: 16px;
+    font-size: 24px;
+}
+
+.sorry p {
+    font-size: 14px;
+    color: rgb(225, 225, 225);
+}
+
+form {
+    display: flex;
+    gap: 16px;
+    align-items: stretch;
+}
+
+.prompt {
+    display: flex;
+    padding: 16px 32px;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    color: rgb(50, 50, 70);
+}
+
+.user {
+    font-size: 24px;
+}
+
+.message {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.compare-symb {
+    margin-top: 8px;
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+}
+
+textarea {
+    padding-top: 16px;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.send {
+    margin-left: -8px;
+    padding: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.send ion-icon {
+    color: rgb(50, 50, 70);
+}
+
+@media(max-width: 500px) {
+    .back-btn ion-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .back-btn a {
+        font-size: 12px;
+    }
+
+    .sorry ion-icon {
+        width: 75px;
+        height: 75px;
+    }
+
+    .sorry h5 {
+        font-size: 18px;
+    }
+
+    .sorry p {
+        margin-top: 8px;
+        font-size: 12px;
+    }
+
+    .user {
+        font-size: 18px;
+    }
+
+    .message {
+        font-size: 12px;
+    }
+
+    form {
+        transform: scale(.7);
+    }
+}
