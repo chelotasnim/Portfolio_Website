@@ -31,6 +31,6 @@ I experienced in full-stack web development with some big companies and agencies
 
 I've reach some achievements in many web competition
 
-Trust me for some business
+Ask me something on
 - Instagram : @chelotasnim
 - Email     : grumpfyxylozx@gmail.com
