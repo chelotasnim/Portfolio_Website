@@ -15,12 +15,18 @@ I currently improving my web programming skills with
 - PHP
 - SQL
 
-I work with some regular front-end / back-end framework such as
+I work with some familiar technology such as
 - Laravel 9
 - CodeIgniter 3
 - Bootstrap 4 & 5
 - React JS
-- Sneats
+- Jquery
+- Figma
+- MariaDB
+- Git
+- Git Hub
+- Visual Studio Code
+- Postman
 
 I experienced in full-stack web development with some big companies and agencies
 - State Tourism Agency
